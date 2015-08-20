@@ -38,7 +38,7 @@ Project Objectives:
 		Document containing information describing the tidy_data_set produced by the R script
 		run_analysis.r. 
 
-	README.MD
+	README.md
 
 		This document.
 
@@ -52,7 +52,6 @@ Project Objectives:
 #APPLICATION INTERFACE
 
 	run_analysis(source_path = getwd(), data_sets = c("train", "test"), keywords = c("mean()", "std()").r 
-
 
 		INPUT PARAMETERS
    			source_path - path to location of source data set folders  - default to working directory getwd()
