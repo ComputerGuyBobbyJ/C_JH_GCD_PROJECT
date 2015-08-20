@@ -1,0 +1,461 @@
+CODE BOOK
+
+# COURSE PROJECT
+#   Getting and Cleaning Data
+#     class.coursera.org/getdata-031
+#
+# Tidy data set described below derived from source data sets train and test documented at:
+#
+#    http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognit #ion+Using+Smartphones
+# 
+# Data columns were copied from the above cited data sets into two data frames 
+# df_train and df_test when the column name contained the key words mean() or std(),
+# and merged into a single data frame df as follows:
+#
+#    df <- rbind(df_train, df_test)
+#
+# Two data columns had been added:
+#
+#   Activity – labels taken from the source data set file activity_labels.txt
+#   Subject  - subject id number taken from the source data set files subject-train.txt and subject-test.txt                      
+# 
+# A final data frame, named tidy_data_set, was produced from the merged data frame
+# df by calculating the average/mean of all numeric data columns grouped by
+# activity and subject as follows:
+#
+#   tidy_data_set <- aggregate(df[,4:ncol(df)], list(df$activity, df$subject), mean)
+#
+# The column names for the final calculated data frame columns had been created by adding
+# a prefix of “Average of” to the original source data set column name.
+
+
+DATA FRAME DICTIONARY/CODE BOOK
+ 
+DATA FRAME DESCRIPTION = tidy_data_set
+ 
+OBJECT SIZE            =     107,552 bytes
+ 
+NUMBER OF ROWS         =         180
+ 
+NUMBER OF COLUMNS(COL) =          68
+ 
+Thursday August 20, 2015 11:16:44 AM MDT
+ 
+COL	COL	COL	ADDITIONAL DATA SUCH AS LEVELS FOR FACTOR VARIABLES
+NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
+ 
+1
+	Activity
+		class() = factor
+			levels = 6
+			level  = WALKING
+			level  = WALKING_UPSTAIRS
+			level  = WALKING_DOWNSTAIRS
+			level  = SITTING
+			level  = STANDING
+			level  = LAYING
+ 
+2
+	Subject
+		class() = numeric
+			min() = 1
+			max() = 30
+ 
+3
+	Average of tBodyAcc-mean()-X
+		class() = numeric
+			min() = 0.22159824394
+			max() = 0.3014610196
+ 
+4
+	Average of tBodyAcc-mean()-Y
+		class() = numeric
+			min() = -0.0405139534294
+			max() = -0.00130828765170213
+ 
+5
+	Average of tBodyAcc-mean()-Z
+		class() = numeric
+			min() = -0.152513899520833
+			max() = -0.07537846886
+ 
+6
+	Average of tBodyAcc-std()-X
+		class() = numeric
+			min() = -0.996068635384615
+			max() = 0.626917070512821
+ 
+7
+	Average of tBodyAcc-std()-Y
+		class() = numeric
+			min() = -0.990240946666667
+			max() = 0.616937015333333
+ 
+8
+	Average of tBodyAcc-std()-Z
+		class() = numeric
+			min() = -0.987658662307692
+			max() = 0.609017879074074
+ 
+9
+	Average of tGravityAcc-mean()-X
+		class() = numeric
+			min() = -0.680043155060241
+			max() = 0.974508732
+ 
+10
+	Average of tGravityAcc-mean()-Y
+		class() = numeric
+			min() = -0.479894842941176
+			max() = 0.956593814210526
+ 
+11
+	Average of tGravityAcc-mean()-Z
+		class() = numeric
+			min() = -0.49508872037037
+			max() = 0.9578730416
+ 
+12
+	Average of tGravityAcc-std()-X
+		class() = numeric
+			min() = -0.996764227384615
+			max() = -0.829554947808219
+ 
+13
+	Average of tGravityAcc-std()-Y
+		class() = numeric
+			min() = -0.99424764884058
+			max() = -0.643578361424658
+ 
+14
+	Average of tGravityAcc-std()-Z
+		class() = numeric
+			min() = -0.990957249538462
+			max() = -0.610161166287671
+ 
+15
+	Average of tBodyAccJerk-mean()-X
+		class() = numeric
+			min() = 0.0426880986186441
+			max() = 0.130193043809524
+ 
+16
+	Average of tBodyAccJerk-mean()-Y
+		class() = numeric
+			min() = -0.0386872111282051
+			max() = 0.056818586275
+ 
+17
+	Average of tBodyAccJerk-mean()-Z
+		class() = numeric
+			min() = -0.0674583919268293
+			max() = 0.0380533591627451
+ 
+18
+	Average of tBodyAccJerk-std()-X
+		class() = numeric
+			min() = -0.994604542264151
+			max() = 0.544273037307692
+ 
+19
+	Average of tBodyAccJerk-std()-Y
+		class() = numeric
+			min() = -0.989513565652174
+			max() = 0.355306716915385
+ 
+20
+	Average of tBodyAccJerk-std()-Z
+		class() = numeric
+			min() = -0.993288313333333
+			max() = 0.0310157077775926
+ 
+21
+	Average of tBodyGyro-mean()-X
+		class() = numeric
+			min() = -0.205775427307692
+			max() = 0.19270447595122
+ 
+22
+	Average of tBodyGyro-mean()-Y
+		class() = numeric
+			min() = -0.204205356087805
+			max() = 0.0274707556666667
+ 
+23
+	Average of tBodyGyro-mean()-Z
+		class() = numeric
+			min() = -0.0724546025804878
+			max() = 0.179102058245614
+ 
+24
+	Average of tBodyGyro-std()-X
+		class() = numeric
+			min() = -0.994276591304348
+			max() = 0.267657219333333
+ 
+25
+	Average of tBodyGyro-std()-Y
+		class() = numeric
+			min() = -0.994210471914894
+			max() = 0.476518714444444
+ 
+26
+	Average of tBodyGyro-std()-Z
+		class() = numeric
+			min() = -0.985538363333333
+			max() = 0.564875818162963
+ 
+27
+	Average of tBodyGyroJerk-mean()-X
+		class() = numeric
+			min() = -0.157212539189362
+			max() = -0.0220916265065217
+ 
+28
+	Average of tBodyGyroJerk-mean()-Y
+		class() = numeric
+			min() = -0.0768089915604167
+			max() = -0.0132022768074468
+ 
+29
+	Average of tBodyGyroJerk-mean()-Z
+		class() = numeric
+			min() = -0.0924998531372549
+			max() = -0.00694066389361702
+ 
+30
+	Average of tBodyGyroJerk-std()-X
+		class() = numeric
+			min() = -0.99654254057971
+			max() = 0.179148649684615
+ 
+31
+	Average of tBodyGyroJerk-std()-Y
+		class() = numeric
+			min() = -0.997081575652174
+			max() = 0.295945926186441
+ 
+32
+	Average of tBodyGyroJerk-std()-Z
+		class() = numeric
+			min() = -0.995380794637681
+			max() = 0.193206498960417
+ 
+33
+	Average of tBodyAccMag-mean()
+		class() = numeric
+			min() = -0.986493196666667
+			max() = 0.644604325128205
+ 
+34
+	Average of tBodyAccMag-std()
+		class() = numeric
+			min() = -0.986464542615385
+			max() = 0.428405922622222
+ 
+35
+	Average of tGravityAccMag-mean()
+		class() = numeric
+			min() = -0.986493196666667
+			max() = 0.644604325128205
+ 
+36
+	Average of tGravityAccMag-std()
+		class() = numeric
+			min() = -0.986464542615385
+			max() = 0.428405922622222
+ 
+37
+	Average of tBodyAccJerkMag-mean()
+		class() = numeric
+			min() = -0.99281471515625
+			max() = 0.434490400974359
+ 
+38
+	Average of tBodyAccJerkMag-std()
+		class() = numeric
+			min() = -0.994646916811594
+			max() = 0.450612065720513
+ 
+39
+	Average of tBodyGyroMag-mean()
+		class() = numeric
+			min() = -0.980740846769231
+			max() = 0.418004608615385
+ 
+40
+	Average of tBodyGyroMag-std()
+		class() = numeric
+			min() = -0.981372675614035
+			max() = 0.299975979851852
+ 
+41
+	Average of tBodyGyroJerkMag-mean()
+		class() = numeric
+			min() = -0.997322526811594
+			max() = 0.0875816618205128
+ 
+42
+	Average of tBodyGyroJerkMag-std()
+		class() = numeric
+			min() = -0.997666071594203
+			max() = 0.250173204117966
+ 
+43
+	Average of fBodyAcc-mean()-X
+		class() = numeric
+			min() = -0.995249932641509
+			max() = 0.537012022051282
+ 
+44
+	Average of fBodyAcc-mean()-Y
+		class() = numeric
+			min() = -0.989034304057971
+			max() = 0.524187686888889
+ 
+45
+	Average of fBodyAcc-mean()-Z
+		class() = numeric
+			min() = -0.989473926666667
+			max() = 0.280735952206667
+ 
+46
+	Average of fBodyAcc-std()-X
+		class() = numeric
+			min() = -0.996604570307692
+			max() = 0.658506543333333
+ 
+47
+	Average of fBodyAcc-std()-Y
+		class() = numeric
+			min() = -0.990680395362319
+			max() = 0.560191344
+ 
+48
+	Average of fBodyAcc-std()-Z
+		class() = numeric
+			min() = -0.987224804307692
+			max() = 0.687124163703704
+ 
+49
+	Average of fBodyAccJerk-mean()-X
+		class() = numeric
+			min() = -0.994630797358491
+			max() = 0.474317256051282
+ 
+50
+	Average of fBodyAccJerk-mean()-Y
+		class() = numeric
+			min() = -0.989398823913043
+			max() = 0.276716853307692
+ 
+51
+	Average of fBodyAccJerk-mean()-Z
+		class() = numeric
+			min() = -0.992018447826087
+			max() = 0.157775692377778
+ 
+52
+	Average of fBodyAccJerk-std()-X
+		class() = numeric
+			min() = -0.995073759245283
+			max() = 0.476803887476923
+ 
+53
+	Average of fBodyAccJerk-std()-Y
+		class() = numeric
+			min() = -0.990468082753623
+			max() = 0.349771285415897
+ 
+54
+	Average of fBodyAccJerk-std()-Z
+		class() = numeric
+			min() = -0.993107759855072
+			max() = -0.00623647528983051
+ 
+55
+	Average of fBodyGyro-mean()-X
+		class() = numeric
+			min() = -0.99312260884058
+			max() = 0.474962448333333
+ 
+56
+	Average of fBodyGyro-mean()-Y
+		class() = numeric
+			min() = -0.994025488297872
+			max() = 0.328817010088889
+ 
+57
+	Average of fBodyGyro-mean()-Z
+		class() = numeric
+			min() = -0.985957788
+			max() = 0.492414379822222
+ 
+58
+	Average of fBodyGyro-std()-X
+		class() = numeric
+			min() = -0.994652185217391
+			max() = 0.196613286661538
+ 
+59
+	Average of fBodyGyro-std()-Y
+		class() = numeric
+			min() = -0.994353086595745
+			max() = 0.646233637037037
+ 
+60
+	Average of fBodyGyro-std()-Z
+		class() = numeric
+			min() = -0.986725274871795
+			max() = 0.522454216314815
+ 
+61
+	Average of fBodyAccMag-mean()
+		class() = numeric
+			min() = -0.986800645362319
+			max() = 0.586637550769231
+ 
+62
+	Average of fBodyAccMag-std()
+		class() = numeric
+			min() = -0.987648484461539
+			max() = 0.178684580868889
+ 
+63
+	Average of fBodyBodyAccJerkMag-mean()
+		class() = numeric
+			min() = -0.993998275797101
+			max() = 0.538404846128205
+ 
+64
+	Average of fBodyBodyAccJerkMag-std()
+		class() = numeric
+			min() = -0.994366667681159
+			max() = 0.316346415348718
+ 
+65
+	Average of fBodyBodyGyroMag-mean()
+		class() = numeric
+			min() = -0.986535242105263
+			max() = 0.203979764835897
+ 
+66
+	Average of fBodyBodyGyroMag-std()
+		class() = numeric
+			min() = -0.981468841692308
+			max() = 0.236659662496296
+ 
+67
+	Average of fBodyBodyGyroJerkMag-mean()
+		class() = numeric
+			min() = -0.997617389275362
+			max() = 0.146618569064407
+ 
+68
+	Average of fBodyBodyGyroJerkMag-std()
+		class() = numeric
+			min() = -0.99758523057971
+			max() = 0.287834616098305
+ 
+
+ 
