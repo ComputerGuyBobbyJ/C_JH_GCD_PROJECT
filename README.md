@@ -5,20 +5,25 @@ Coursera - John Hopkins - Getting and Cleaning Data - Course Project
 
 This material was produced as a response to the requirements for the 
 
-Course Project
-Getting and Cleaning Data
-class.coursera.org/getdata-031.
+	Course Project
+		Getting and Cleaning Data
+		class.coursera.org/getdata-031.
 
-Source data consists of train and test data set folders originally taken from:
+Source data consisting of "train" and "test" data set folders taken from:
+	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Original data obtained from:
 	http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 Project Objectives:
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names. 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of 
-   each variable for each activity and each subject.
+<ol>
+  <li>Merges the training and the test sets to create one data set.</li>
+  <li>Extracts only the measurements on the mean and standard deviation for each measurement.</li>
+  <li>Uses descriptive activity names to name the activities in the data set</li>
+  <li>Appropriately labels the data set with descriptive variable names.</li>
+  <li>From the data set in step 4, creates a second, independent tidy data set with the average of 
+   each variable for each activity and each subject.</li>
+</ol>
 
 
 #FILE LIST
@@ -54,7 +59,7 @@ Project Objectives:
    			data_sets   - data sets to be analyZed                     - default to c("train", "test")
 			keywords    - key words to be found in variable names      - default to c("mean()", "std()")
 		OUTPUT
-   			tidy data set with the average/mean of each variable for each activity and subject.
+   			tidy data set with the average/mean of each numeric variable for each activity and subject.
 
 	
 #OPERATING INSTRUCTIONS
