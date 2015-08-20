@@ -9,18 +9,18 @@ CODE BOOK
 #    http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 # 
 # Data columns were copied from the above cited data sets into two data frames 
-# df_train and df_test when the column name contained the key words mean() or std(),
-# and merged into a single data frame df as follows:
+# "df_train" and "df_test" when the column name contained the key words mean() or std(),
+# and merged into a single data frame "df" as follows:
 #
 #    df <- rbind(df_train, df_test)
 #
 # Two data columns had been added:
 #
 #   Activity – labels taken from the source data set file activity_labels.txt
-#   Subject  - subject id number taken from the source data set files subject-train.txt and subject-test.txt                      
+#   Subject  - subject id number taken from the source data set files "subject_train.txt" and "subject_test.txt"                      
 # 
-# A final data frame, named tidy_data_set, was produced from the merged data frame
-# df by calculating the average/mean of all numeric data columns grouped by
+# A final data frame, named "tidy_data_set", was produced from the merged data frame "df"
+# by calculating the average/mean of all numeric data columns grouped by
 # activity and subject as follows:
 #
 #   tidy_data_set <- aggregate(df[,col_start_agg:ncol(df)], list(df$activity, df$subject), mean)
@@ -31,7 +31,7 @@ CODE BOOK
 
 DATA FRAME DICTIONARY/CODE BOOK
  
-DATA FRAME DESCRIPTION = Data Frame
+DATA FRAME DESCRIPTION = tidy_data_set
  
 OBJECT SIZE            =     107,552 bytes
  
@@ -41,8 +41,8 @@ NUMBER OF COLUMNS(COL) =          68
  
 Thursday August 20, 2015 2:27:45 PM MDT
  
-COL	COL	COL
-NUM	NAME	CLASS
+COL	COL	COL	ADDITIONAL DATA INCLUDED, LEVELS FOR FACTOR VARIABLES
+NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
  
 1
 	Activity
