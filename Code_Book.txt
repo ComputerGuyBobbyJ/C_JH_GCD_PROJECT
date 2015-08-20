@@ -6,7 +6,7 @@ CODE BOOK
 #
 # Tidy data set described below derived from source data sets train and test documented at:
 #
-#    http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognit #ion+Using+Smartphones
+#    http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 # 
 # Data columns were copied from the above cited data sets into two data frames 
 # df_train and df_test when the column name contained the key words mean() or std(),
