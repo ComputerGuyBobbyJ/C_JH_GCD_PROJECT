@@ -23,7 +23,7 @@ CODE BOOK
 # df by calculating the average/mean of all numeric data columns grouped by
 # activity and subject as follows:
 #
-#   tidy_data_set <- aggregate(df[,4:ncol(df)], list(df$activity, df$subject), mean)
+#   tidy_data_set <- aggregate(df[,col_start_agg:ncol(df)], list(df$activity, df$subject), mean)
 #
 # The column names for the final calculated data frame columns had been created by adding
 # a prefix of “Average of” to the original source data set column name.
@@ -31,7 +31,7 @@ CODE BOOK
 
 DATA FRAME DICTIONARY/CODE BOOK
  
-DATA FRAME DESCRIPTION = tidy_data_set
+DATA FRAME DESCRIPTION = Data Frame
  
 OBJECT SIZE            =     107,552 bytes
  
@@ -39,10 +39,10 @@ NUMBER OF ROWS         =         180
  
 NUMBER OF COLUMNS(COL) =          68
  
-Thursday August 20, 2015 11:16:44 AM MDT
+Thursday August 20, 2015 2:27:45 PM MDT
  
-COL	COL	COL	ADDITIONAL DATA SUCH AS LEVELS FOR FACTOR VARIABLES
-NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
+COL	COL	COL
+NUM	NAME	CLASS
  
 1
 	Activity
@@ -456,6 +456,7 @@ NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
 		class() = numeric
 			min() = -0.99758523057971
 			max() = 0.287834616098305
+ 
  
 
  
