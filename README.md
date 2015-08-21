@@ -28,7 +28,7 @@ Project Objectives:
 
 #FILE LIST
 
-	run_analysis.r
+	run_analysis().r
 
 		An R script/function designed to process the source data sets and produce the final 
                 tidy data set described above in Project Objective 5.		
@@ -59,6 +59,34 @@ Project Objectives:
 			keywords    - key words to be found in variable names      - default to c("mean()", "std()")
 		OUTPUT
    			tidy data set with the average/mean of each numeric variable for each activity and subject.
+
+
+#APPLICATION OVERVIEW
+
+	For each data_set in the vector data_sets read from the original source data folders:
+
+		Data columns are copied into temporary data frame "df" when the column name 
+		contains the key words mean() or std(),
+
+		Two data columns are added:
+  			Activity – labels taken from the source data set file activity_labels.txt
+  			Subject  - subject id number taken from the source data set files "subject_train.txt" 
+				   and "subject_test.txt"
+
+		The column names for the numeric data columns are created by adding a prefix of “Average of” 
+		to the original source data set column name.
+
+		The data is then merged using:
+
+   			df_merge <- rbind(df_merge, df)
+
+		The process is repeated for the next source data set
+
+
+	A final data frame, named "tidy_data_set", is produced from the merged data frame "df_merge"
+	by calculating the average/mean of all numeric data columns grouped by activity and subject as follows:
+ 
+	tidy_data_set <- aggregate(df_merge[,col_start_agg:ncol(df_merge)], list(df_merge$activity, df_merge$subject), mean)
 
 	
 #OPERATING INSTRUCTIONS

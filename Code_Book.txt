@@ -4,29 +4,22 @@ CODE BOOK
 #   Getting and Cleaning Data
 #     class.coursera.org/getdata-031
 #
-# Tidy data set described below derived from source data sets train and test documented at:
+#  Tidy data set described below derived from source data sets "train" and "test" taked from:
 #
-#    http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-# 
-# Data columns were copied from the above cited data sets into two data frames 
-# "df_train" and "df_test" when the column name contained the key words mean() or std(),
-# and merged into a single data frame "df" as follows:
+#	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 #
-#    df <- rbind(df_train, df_test)
+#  Data columns are selected from the source data set where the column name contains either
+#  mean() or std().
 #
-# Two data columns had been added:
+#  The selected data columns are then merged into a final data frame and analyzed using the R
+#  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
 #
-#   Activity – labels taken from the source data set file activity_labels.txt
-#   Subject  - subject id number taken from the source data set files "subject_train.txt" and "subject_test.txt"                      
-# 
-# A final data frame, named "tidy_data_set", was produced from the merged data frame "df"
-# by calculating the average/mean of all numeric data columns grouped by
-# activity and subject as follows:
+#  The column names for the final calculated data frame "tidy_data_set" are created by adding a
+#  prefix of “Average of” to the original source data set column name.
 #
-#   tidy_data_set <- aggregate(df[,col_start_agg:ncol(df)], list(df$activity, df$subject), mean)
+#  For example: original source column named "tBodyAcc-mean()-X", selected because it contains the
+#  keyword "mean()", is included in the final data set with the name "Average of tBodyAcc-mean()-X"
 #
-# The column names for the final calculated data frame columns had been created by adding
-# a prefix of “Average of” to the original source data set column name.
 
 
 DATA FRAME DICTIONARY/CODE BOOK
