@@ -63,7 +63,7 @@ Project Objectives:
 
 #APPLICATION OVERVIEW
 
-	For each data_set in the vector data_sets read from the original source data folders:
+	For each of the original source data set folders:
 
 		Data columns are copied into temporary data frame "df" when the column name 
 		contains the key words mean() or std(),
