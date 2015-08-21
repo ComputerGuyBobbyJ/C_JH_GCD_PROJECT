@@ -9,7 +9,7 @@ This material was produced as a response to the requirements for the
 		Getting and Cleaning Data
 		class.coursera.org/getdata-031.
 
-Source data consisting of "train" and "test" data set folders taken from:
+Source data set folder "UCI HAR Dataset" taken from:
 	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Original data obtained from:
@@ -44,19 +44,21 @@ Project Objectives:
 
 #INSTALLATION
 
-	Copy the R script file, run_analysys.r, to your R working directory.
+	Copy the R script file, "run_analysys.r", to the R working directory.
 
-	Copy the train and test data set folders to your R working directory.
+	Copy the "UCI HAR Dataset" folder to the R working directory.
 
 
 #APPLICATION INTERFACE
 
-	run_analysis(source_path = getwd(), data_sets = c("train", "test"), keywords = c("mean()", "std()").r 
+	run_analysis(source_path = "~/R/UCI HAR Dataset", keywords = c("mean()", "std()").r 
 
 		INPUT PARAMETERS
-   			source_path - path to location of source data set folders  - default to working directory getwd()
-   			data_sets   - data sets to be analyZed                     - default to c("train", "test")
-			keywords    - key words to be found in variable names      - default to c("mean()", "std()")
+   			source_path - path to location of source data set folder
+                                        default to ~/R/UCI HAR Dataset
+
+			keywords    - key words to be found in variable names
+                                        default to c("mean()", "std()")
 		OUTPUT
    			tidy data set with the average/mean of each numeric variable for each activity and subject.
 
@@ -66,10 +68,12 @@ Project Objectives:
 	For each of the original source data set folders:
 
 		Data columns are copied into temporary data frame "df" when the column name 
-		contains the key words mean() or std(),
+		contains the key word "mean()" or "std()",
 
 		Two data columns are added:
+
   			Activity – labels taken from the source data set file activity_labels.txt
+
   			Subject  - subject id number taken from the source data set files "subject_train.txt" 
 				   and "subject_test.txt"
 

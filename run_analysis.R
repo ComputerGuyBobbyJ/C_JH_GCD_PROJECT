@@ -1,22 +1,26 @@
-run_analysis <- function(source_path=getwd(), data_sets=c("train","test"), keywords=c("mean()", "std()")){
+run_analysis <- function(source_path="~/R/UCI HAR Dataset", keywords=c("mean()", "std()")){
 # Getting and Cleaning Data
 #   class.coursera.org/getdata-031
 #   Course Project
 #
 # INPUT PARAMETERS
-#   source_path - path to location of original data set folders
-#                   default to working directory
-#   data_sets   - original data set files to be analyzed
-#                   default to train and test
-#   keywords    - list of key words to be found in variable names of final data frame
+#   source_path - path to location of original UCI data set folder,
+#                   default to UCI HAR Dataset folder stored in R working directory
+#   
+#   keywords    - list of key words to be found in variable names of final data frame,
 #                   default to mean() and std()
 # OUTPUT
 #   Tidy data set with the average/mean of each variable for each activity and subject.
 
     ## verify parameter source_path exists, otherwise return error message
     if (!dir.exists(source_path)){
-        return("INPUT ERROR: source_path/directory does not exist")
+        message <- "INPUT PARAMETER ERROR: Source_path/directory >"
+        message <- paste(message, source_path, "< does not exist")
+        return(message)
     }
+    
+    ## build list of data set folders
+    data_sets <- list.dirs(path = source_path, recursive = FALSE, full.names = FALSE)
     
     ## read activities file
     file_name  <- paste(source_path, "/activity_labels.txt", sep = "")
@@ -30,7 +34,7 @@ run_analysis <- function(source_path=getwd(), data_sets=c("train","test"), keywo
     if (!file.exists(file_name)){
         return(paste("ERROR: file >", file_name, "< does not exist"))
     }    
-    features   <- read.table("~/R/features.txt", quote="\"", comment.char="")
+    features   <- read.table(file_name, quote="\"", comment.char="")
     
     ## create index of features which include key words mean() or std()
     ##   fixed = TRUE option of grep() selected to force exact match for keywords
@@ -68,7 +72,7 @@ run_analysis <- function(source_path=getwd(), data_sets=c("train","test"), keywo
         }
         s <- read.table(file_name, quote="\"", comment.char="")
         
-        ### create results dataframe
+        ### create temporary dataframe "df"
         df <- data.frame(subject=integer(nrow(x)))
         
         ### add subject data to results data frame
@@ -77,15 +81,15 @@ run_analysis <- function(source_path=getwd(), data_sets=c("train","test"), keywo
         ### add data source factor to results data frame
         ### to indicate original data set source for this record, train or test
         df$source_DS <- factor(x=integer(nrow(x)),levels=1:length(data_sets),labels=data_sets)
-        ### add source_DS data to results data frame
+        ### add source data set folder name to data frame
         t <- which(data_sets == data_set)
         df$source_DS <- factor(x=t,levels=1:length(data_sets),labels=data_sets)  
         
-        ### add activity factor to results data frame
+        ### add activity factor column to results data frame
         a  <- as.character(activities[,2])    
         df$activity <- factor(x=integer(nrow(x)),levels=1:length(a),labels=a)
         
-        ### add activity factor data to results data frame
+        ### add activity factor data to activity data column
         ###  using original activity labels from activity_labels.txt file
         for (i in 1:nrow(df)){
             z <- as.integer(activities[y[i,1],2])

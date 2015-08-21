@@ -4,7 +4,7 @@ CODE BOOK
 #   Getting and Cleaning Data
 #     class.coursera.org/getdata-031
 #
-#  Tidy data set described below derived from source data sets "train" and "test" taked from:
+#  Tidy data set described below derived from source data sets "train" and "test" taken from:
 #
 #	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 #
@@ -37,10 +37,10 @@ NUMBER OF ROWS         =         180
  
 NUMBER OF COLUMNS(COL) =          68
  
-Thursday August 20, 2015 2:27:45 PM MDT
+Friday August 21, 2015 4:47:36 PM MDT
  
-COL	COL	COL	ADDITIONAL DATA INCLUDED, LEVELS FOR FACTOR VARIABLES
-NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
+COL	COL	COL	 ADDITIONAL DATA INCLUDED, LEVELS FOR FACTOR VARIABLES
+NUM	NAME	CLASS	 MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
  
 1
 	Activity
@@ -454,7 +454,6 @@ NUM	NAME	CLASS	MINIMUM AND MAXIMUM VALUES FOR NUMERIC VARIABLES
 		class() = numeric
 			min() = -0.99758523057971
 			max() = 0.287834616098305
- 
  
 
  
