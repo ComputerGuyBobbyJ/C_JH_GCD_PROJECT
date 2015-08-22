@@ -15,7 +15,9 @@ CODE BOOK
 #  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
 #
 #  Two data columns are added:
+#
 #    Activity – labels taken from the source data set file "activity_labels.txt"
+#
 #    Subject  - subject id number taken from the source data set files "subject_train.txt" 
 #               and "subject_test.txt"
 #

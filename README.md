@@ -60,12 +60,13 @@ Project Objectives:
 			keywords    - key words to be found in variable names
                                         default to c("mean()", "std()")
 		OUTPUT
-   			tidy data set with the average/mean of each numeric variable for each activity and subject.
+   			tidy data set with the average/mean of each numeric variable for 
+                        each activity and subject.
 
 
 #APPLICATION OVERVIEW
 
-	For each of the original source data set folders:
+	For each of the original source data sets, "train" and "test":
 
 		Data columns are copied into temporary data frame "df" when the column name 
 		contains the key word "mean()" or "std()",
@@ -74,11 +75,11 @@ Project Objectives:
 
   			Activity – labels taken from the source data set file activity_labels.txt
 
-  			Subject  - subject id number taken from the source data set files "subject_train.txt" 
-				   and "subject_test.txt"
+  			Subject  - subject id number taken from the source data set files
+				   "subject_train.txt" and "subject_test.txt"
 
-		The column names for the numeric data columns are created by adding a prefix of “Average of” 
-		to the original source data set column name.
+		The column names for the numeric data columns are created by adding a prefix of
+		“Average of” to the original source data set column name.
 
 		The data is then merged using:
 
@@ -88,14 +89,17 @@ Project Objectives:
 
 
 	A final data frame, named "tidy_data_set", is produced from the merged data frame "df_merge"
-	by calculating the average/mean of all numeric data columns grouped by activity and subject as follows:
+	by calculating the average/mean of all numeric data columns grouped by activity and subject 
+        as follows:
  
-	tidy_data_set <- aggregate(df_merge[,col_start_agg:ncol(df_merge)], list(df_merge$activity, df_merge$subject), mean)
+	tidy_data_set <- aggregate(df_merge[,col_start_agg:ncol(df_merge)], list(df_merge$activity,_ 
+                         df_merge$subject), mean)
 
 	
 #OPERATING INSTRUCTIONS
 
-	Type the following commands into the R console after files/folders have been copied to the R working directory:
+	Type the following commands into the R console after files/folders have been copied to the R 
+        working directory:
 
 		source('run_analysis.R')
 		tidy_data_set <- run_analysis()
@@ -103,7 +107,8 @@ Project Objectives:
 
 #LICENSE
 
-	This project uses data sets, "train" and "test", under the provisions of the original license appearing below:
+	This project uses data sets, "train" and "test", under the provisions of the original license 
+        appearing below:
 
 License:
 ========
