@@ -121,7 +121,7 @@ Project Objectives:
 	"tidy_data_set.txt".
 
 	For example, the "tidy_data_set.txt" column name "Avg_of_tBodyAcc-mean()-X" is read 
-	in as "Average.of.tBodyAcc.mean...X".
+	in as "Avg_of_tBodyAcc.mean...X".
 
 
 
