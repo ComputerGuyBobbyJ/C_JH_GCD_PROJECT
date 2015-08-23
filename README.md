@@ -107,8 +107,8 @@ Project Objectives:
 #ISSUES/BUGS
 
 	Reading the uploaded file "tidy_data_set.txt" with either read.table or read.csv abbreviates
-	the column names. The column name is read in as a shorter version of the actual column name stored
-	in "tidy_data_set.txt".
+	the column names. The column name is read in as a shorter version of the actual column name
+	stored in "tidy_data_set.txt".
 
 	For example, the "tidy_data_set.txt" column name "Average of tBodyAcc-mean()-X" is read in as
 	"Average.of.tBodyAcc.mean...X".

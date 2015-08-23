@@ -11,15 +11,15 @@ CODE BOOK
 #  Data columns are selected from the source data set where the column name contains either
 #  mean() or std().
 #
-#  The selected data columns are then merged into a final data frame and analyzed using the R
-#  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
-#
 #  Two data columns are added:
 #
 #    Activity – labels taken from the source data set file "activity_labels.txt"
 #
 #    Subject  - subject id number taken from the source data set files "subject_train.txt" 
 #               and "subject_test.txt"
+#
+#  The selected data columns are then merged into a final data frame and analyzed using the R
+#  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
 #
 #  The column names for the final calculated data frame "tidy_data_set" are created by adding a
 #  prefix of “Average of” to the original source data set column name.
