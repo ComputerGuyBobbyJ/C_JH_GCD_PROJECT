@@ -92,7 +92,7 @@ run_analysis <- function(source_path="~/R/UCI HAR Dataset", keywords=c("mean()",
         ### add activity factor data to activity data column
         ###  using original activity labels from activity_labels.txt file
         for (i in 1:nrow(df)){
-            idx <- match(y[i,1], activity_labels$V1)
+            idx <- match(y[i,1], activities$V1)
             df$activity[i] <- activities[idx,2]
         }
         
@@ -106,7 +106,7 @@ run_analysis <- function(source_path="~/R/UCI HAR Dataset", keywords=c("mean()",
             
             #### add name to new column based on origial features.txt data
             col_num <- col_num + 1           
-            colnames(df)[col_num] <- paste("Average of",as.character(features$V2[item]))
+            colnames(df)[col_num] <- paste("Avg_of_",as.character(features$V2[item]), sep = "")
         }
         
         ### merge current data frame with df_merge

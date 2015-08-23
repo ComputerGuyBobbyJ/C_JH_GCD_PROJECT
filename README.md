@@ -79,7 +79,7 @@ Project Objectives:
 				   "subject_train.txt" and "subject_test.txt"
 
 		The column names for the numeric data columns are created by adding a prefix of
-		“Average of” to the original source data set column name.
+		“Avg_of_” to the original source data set column name.
 
 		The data is then merged using:
 
@@ -120,7 +120,7 @@ Project Objectives:
 	The column name is read in as a shorter version of the actual column name stored in 
 	"tidy_data_set.txt".
 
-	For example, the "tidy_data_set.txt" column name "Average of tBodyAcc-mean()-X" is read 
+	For example, the "tidy_data_set.txt" column name "Avg_of_tBodyAcc-mean()-X" is read 
 	in as "Average.of.tBodyAcc.mean...X".
 
 
