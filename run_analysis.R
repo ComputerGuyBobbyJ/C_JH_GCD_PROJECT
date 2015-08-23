@@ -92,8 +92,8 @@ run_analysis <- function(source_path="~/R/UCI HAR Dataset", keywords=c("mean()",
         ### add activity factor data to activity data column
         ###  using original activity labels from activity_labels.txt file
         for (i in 1:nrow(df)){
-            z <- as.integer(activities[y[i,1],2])
-            df$activity[i] <- factor(x=z,levels=1:length(a),labels=a)
+            idx <- match(y[i,1], activity_labels$V1)
+            df$activity[i] <- activities[idx,2]
         }
         
         ### Copy all original x data columns which include mean() and std() in column name
