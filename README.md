@@ -106,12 +106,22 @@ Project Objectives:
 
 #ISSUES/BUGS
 
-	Reading the uploaded file "tidy_data_set.txt" with either read.table or read.csv abbreviates
-	the column names. The column name is read in as a shorter version of the actual column name
-	stored in "tidy_data_set.txt".
+	As directed in the submission process, the tidy script file produced by the R script
+	run_analysis() is written to a text file, "tidy_data_set.txt", using the command 
+	write.table(..., row.names - FALSE) and then it is uploaded through the submission page. 
 
-	For example, the "tidy_data_set.txt" column name "Average of tBodyAcc-mean()-X" is read in as
-	"Average.of.tBodyAcc.mean...X".
+	The uploaded txt file, "tidy_data_set.txt", contains complete data column names.
+
+	A downloaded copy of the txt file, "tidy_data_set.txt", contains complete data column names.
+
+	But reading the downloaded file "tidy_data_set.txt" with either read.table or read.csv 
+	abbreviates the column names. 
+
+	The column name is read in as a shorter version of the actual column name stored in 
+	"tidy_data_set.txt".
+
+	For example, the "tidy_data_set.txt" column name "Average of tBodyAcc-mean()-X" is read 
+	in as "Average.of.tBodyAcc.mean...X".
 
 
 

@@ -18,16 +18,15 @@ CODE BOOK
 #    Subject  - subject id number taken from the source data set files "subject_train.txt" 
 #               and "subject_test.txt"
 #
-#  The selected data columns are then merged into a final data frame and analyzed using the R
-#  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
-#
 #  The column names for the final calculated data frame "tidy_data_set" are created by adding a
 #  prefix of “Average of” to the original source data set column name.
 #
 #  For example: original source column named "tBodyAcc-mean()-X", included because it contains the
 #  keyword "mean()", appears in the final data set with the name "Average of tBodyAcc-mean()-X"
 #
-
+#  The selected data columns are then merged into a final data frame and analyzed using the R
+#  aggregate function to calculate the average/mean of the numeric data grouped by Activity and Subject.
+#
 
 DATA FRAME DICTIONARY/CODE BOOK
  
